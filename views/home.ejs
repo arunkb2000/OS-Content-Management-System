@@ -1,20 +1,50 @@
 
 <%- include("partials/header"); -%>
 
-<h1>Home</h1>
-<p style="color: darkgreen;"> <%= homeContent %> </p>
+<h1 style="color: skyblue; text-shadow: saddlebrown; font-weight: bold; text-align: center; font-family:cursive">Contents</h1>
+<p style='font-size:15px; text-align: center; margin-top: -20px; color: tomato;'>&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;&#8277;</p>
+<br><br>
+<hr>
+<!-- <p style="color: darkgreen;"> <%= homeContent %> </p> -->
 
 
 <%  posts.forEach(function(post){ %>
+        <section class="pt-5 pb-5">
+          <div class="container">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-6 col-md-6   mt-4 mt-md-0">
+                <img alt="image" class="img-fluid rounded d-block mx-auto shadow aos-init" data-aos="fade-right" data-aos-offset="300" id = 'imgShow' />
+              </div>
+              <div class="col-12 col-md-5">
+                <h2 data-aos="fade-up" class="aos-init" style="color: darkgreen; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><%=post.title%></h2>
+                <p class="text-h4 mt-3 lead aos-init" data-aos="fade-up" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><%=post.content.substring(0, 100) + " ..."%></p>
+                <ol class="list-unstyled mt-4">
+                  <li class="d-flex mb-2 mt-2 aos-init" data-aos="fade-up">
+                    <i class="fas fa-check-circle fa-lg text-info mr-1 mt-2 mb-2 ml-0" aria-hidden="true"></i><span class="pl-2 pt-1"><a href="/posts/<%=post._id%>">Read More</a></span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- jQuery is required used example template -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+         AOS.init({
+            duration: 1200,
+          })
+          document.getElementById('imgShow').src = 'https://picsum.photos/'+(400+rand())+'/' + (250 + rand())+'?random='+ rand() +'';
+          function rand(){ return Math.floor(Math.random() * 90)} ;
+    </script>
+  <hr style="color: cornflowerblue; ">
+<!-- <h1><%=post.title%></h1> -->
+<!-- <p> -->
+<!-- <%=post.content.substring(0, 100) + " ..."%> -->
+<!-- <a href="/posts/<%=post._id%>">Read More</a> -->
+<!-- </p> -->
 
-<h1><%=post.title%></h1>
-<p>
-<%=post.content.substring(0, 100) + " ..."%>
-<a href="/posts/<%=post._id%>">Read More</a>
-</p>
 
-
-<% }) %>
+    <% }) %>
 
 
 <%- include("partials/footer"); -%>
