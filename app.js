@@ -49,7 +49,7 @@ let transporter = nodemailer.createTransport({
   
   auth: {
     user: 'oscms2022@gmail.com',
-    pass: 'oscms@123',
+    pass: '',
   },
   tls: {
       // do not fail on invalid certs
