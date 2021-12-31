@@ -90,11 +90,18 @@ app.post('/verify',function(req,res){
         if (page > pageCount) {
           page = pageCount
         }
-      res.render("home", {
+ //Below code is for pagination(not complete code only limited page we can see using this code we need to modify it as well)
+//       res.render("home", {
+//         homeContent: homeStartingContent,
+//         page: page,
+//         pageCount: pageCount,
+//         posts: posts.slice(page * 2 - 2, page * 2)
+//         });
+        res.render("home", {
         homeContent: homeStartingContent,
         page: page,
         pageCount: pageCount,
-        posts: posts.slice(page * 2 - 2, page * 2)
+        posts: posts
         });
       });
     });
