@@ -1,0 +1,26 @@
+
+  <%- include("partials/mainheader"); -%>
+  
+  <%- include("info"); -%>
+      <div class="contact">
+        <p style="color: blue"><%= msg %></p>
+        <form method="POST" action="verify">
+          <p>
+            <label>Enter otp</label>
+            <input type="text" name="otp" required>
+          </p>
+          
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+
+        </form>
+        <br>
+        <form method="POST" action="resend">
+          <p class="full">
+            <button type="submit">resend otp</button>
+          </p>
+          
+      </div>
+    </div>
+    <%- include("partials/footer"); -%>

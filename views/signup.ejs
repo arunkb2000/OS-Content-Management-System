@@ -1,0 +1,31 @@
+
+  <%- include("partials/mainheader"); -%>
+
+  <%- include("info"); -%>
+      <div class="contact">
+        <h3>Sign Up</h3>
+        <form method="POST" action="send">
+          <p>
+            <label>Firstname</label>
+            <input type="text" name="firstname" required>
+          </p>
+          <p>
+            <label>Lastname</label>
+            <input type="text" name="lastname" required>
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="number" name="phone" required>
+          </p>
+         
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+    <%- include("partials/footer"); -%>
