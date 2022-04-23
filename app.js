@@ -48,8 +48,8 @@ let transporter = nodemailer.createTransport({
   service : 'Gmail',
   
   auth: {
-    user: 'arun.dakshana17@gmail.com',
-    pass: '9826368354',
+    user: 'oscms2022@gmail.com',
+    pass: '@Aaron2022@',
   },
   tls: {
       // do not fail on invalid certs
