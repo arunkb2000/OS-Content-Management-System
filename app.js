@@ -152,7 +152,6 @@ app.post('/verify',function(req,res){
       });
   }
 });  
-
 app.post('/resend',function(req,res){
   var mailOptions={
       to: email,
