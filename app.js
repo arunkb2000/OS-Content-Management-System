@@ -44,12 +44,12 @@ console.log(otp);
 let transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 25,
-  secure: false,
+  secure: true,
   service : 'Gmail',
   
   auth: {
-    user: 'arun.dakshana17@gmail.com',
-    pass: '9826368354',
+    user: 'oscms5609@gmail.com',
+    pass: '@Placement2022',
   },
   tls: {
       // do not fail on invalid certs
